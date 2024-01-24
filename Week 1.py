@@ -30,14 +30,17 @@ Created on Wed Jan 24 10:42:30 2024
 ## Challenge
 # ask a person their name.
 name = input("What is your name? ")
+
 # Say hello and their name.
 print("Hello", name)
+
 # ask if they want tea or coffee + how many sugars or milk
 drink = input("What drink do you want - coffee or tea? ")
-print(drink)
+# print(drink)
 sugar = input("How many sugars: ")
+
 # repeat their order back to them
-print(drink, sugar)
+print(name, "you ordered a "+ drink, "with", sugar, "sugars")
 
 
 
