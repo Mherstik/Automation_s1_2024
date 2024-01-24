@@ -39,8 +39,10 @@ drink = input("What drink do you want - coffee or tea? ")
 # print(drink)
 sugar = input("How many sugars: ")
 
+milk = "stuff"
+
 # repeat their order back to them
-print(name, "you ordered a "+ drink, "with", sugar, "sugars")
+print(name, "you ordered a " + drink, "with", sugar, "sugars")
 
 
 
