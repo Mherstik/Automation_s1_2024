@@ -35,6 +35,7 @@ print("Hello", name)
 # ask if they want tea or coffee + how many sugars or milk
 drink = input("What drink do you want - coffee or tea? ")
 print(drink)
+sugar = input("How many sugars: ")
 # repeat their order back to them
 
 
