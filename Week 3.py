@@ -17,8 +17,9 @@ numbers = [
 ]
 
 ## we want to find all numbers that are even!
-
-
+print(951/2)
+print("The remainder of 951 divided by 2", 951%2)
+print("The modulus of 951 divided by 2", 951//2)
 ## we want to find all numbers that are odd!
 
 
