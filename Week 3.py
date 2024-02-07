@@ -6,12 +6,41 @@ Created on Wed Feb  7 09:13:55 2024
 @author: marcus
 """
 
-usernum = input("Give me a number: ")
+dictionary = ['a','b', 'c', 'd', 'e', 'f', 'g'
+              'h', 'i', 'j', 'k', 'l']
 
-if usernum % 2 == 0:
-    print("The number", usernum, "is even")
-else:
-    print("The number", usernum, "is odd")
+charlen = 0
+# get the number of characters in a users string
+userstr = input("Give me a string: ")
+print(len(userstr))
+
+for each in userstr:
+    if each.lower() in dictionary:
+        charlen += 1
+
+
+
+
+
+
+
+
+
+
+char2 = 0
+import string
+for each in userstr:
+    if each.lower() in string.ascii_lowercase:
+        char2 += 1
+print(char2)
+
+
+# usernum = int(input("Give me a number: "))
+
+# if usernum % 2 == 0:
+#     print("The number", usernum, "is even")
+# else:
+#     print("The number", usernum, "is odd")
 
 
 # numbers = [
