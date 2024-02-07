@@ -27,27 +27,42 @@ Created on Wed Feb  7 09:13:55 2024
 name = input("Give me your name please: ")
 
 
-# Read score between 0 -100
+# # Read score between 0 -100
 while True:
     score = input("Give me your score: ")
     if score.isdigit():
         score = int(score)
-        if score >= 0 and score <= 100:
+        #if score >= 0 and score <= 100:
+        if score in range(0,101):
             break
         else:
             print("Not a valid number")
     else:
         print("Not a valid number")
 
+# #score = input("Give me your score: ")
+# try:
+#     score = float(input("Enter the student's score (0-100): "))
+#     if score < 0 or score > 100:
+#         print("Invalid score. The score must be between 0 and 100.")
+# except ValueError:
+#     print("Invalid input. Please enter a numeric value for the score.")
 
-# if score < 50
-# 	Fail
+
+
+if score < 50:
+    print(name, "Failed")
 # if score between 50 and 64
-# 	Pass
+elif score >=50 and score <= 64:
+    print(name, "passed")
 # if score between 65 and 74
-# 	Credit
+elif score >=65 and score <= 74:
+	print("Credit")
 # if score between 75 and 84
-# 	Distinction
+elif score >=75 and score <= 84:
+ 	print("Distinction")
 # if score above 85
+else: 
+    print("HD")
 # 	HD
 	
