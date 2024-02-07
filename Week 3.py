@@ -6,33 +6,45 @@ Created on Wed Feb  7 09:13:55 2024
 @author: marcus
 """
 
-dictionary = ['a','b', 'c', 'd', 'e', 'f', 'g'
-              'h', 'i', 'j', 'k', 'l']
+### HOMEWORK  ###
 
-charlen = 0
-# get the number of characters in a users string
-userstr = input("Give me a string: ")
-print(len(userstr))
-
-for each in userstr:
-    if each.lower() in dictionary:
-        charlen += 1
-
-
-
+# get input from a user
+# count how many vowels, consonants, 
+# numbers and special characters are in it/
+# eg. input = "the 5 Brown fox's ate 17 of my F&*^'n chickens!"
+# eg. output  
+# 21 consonants
+# 8 vowels
+# 3 numbers
+# 6 special characters
+# 9 spaces (optional)
 
 
 
+# dictionary = ['a','b', 'c', 'd', 'e', 'f', 'g'
+#               'h', 'i', 'j', 'k', 'l']
+
+# charlen = 0
+# # get the number of characters in a users string
+# userstr = input("Give me a string: ")
+# print(len(userstr))
+
+# for each in userstr:
+#     if each.lower() in dictionary:
+#         charlen += 1
 
 
+### USING an import
+
+# import string
+
+# char2 = 0
+# for each in userstr:
+#     if each.lower() in string.ascii_lowercase:
+#         char2 += 1
+# print(char2)
 
 
-char2 = 0
-import string
-for each in userstr:
-    if each.lower() in string.ascii_lowercase:
-        char2 += 1
-print(char2)
 
 
 # usernum = int(input("Give me a number: "))
