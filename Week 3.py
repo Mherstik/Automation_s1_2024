@@ -13,16 +13,30 @@ numbers = [
     399, 162, 758, 219, 918, 237, 412, 566, 826, 248, 866, 950, 626, 949, 687, 217,
     815, 67, 104, 58, 512, 24, 892, 894, 767, 553, 81, 379, 843, 831, 445, 742, 717,
     958, 609, 842, 451, 688, 753, 854, 685, 93, 857, 440, 380, 126, 721, 328, 753, 470,
-    743, 527
+    743, 527, "test"
 ]
 
 ## we want to find all numbers that are even!
-print(951/2)
-print("The remainder of 951 divided by 2", 951%2)
-print("The modulus of 951 divided by 2", 951//2)
+# print(951/2)
+# print("The remainder of 951 divided by 2= ", 951%2)
+# print("The modulus of 951 divided by 2 = ", 951//2)
+# usernum = int(input())
+ 
+#even = list()
+even = []
+odd = []
+
+for number in numbers:
+    if (number % 2) == 0:
+        #print(number, "is even")
+        even.append(number)
+    else:
+        #print(number, "is odd")
+        odd.append(number)
 ## we want to find all numbers that are odd!
 
-
+print("evens are: ", even)
+print("odds are: ", odd)
 
 
 # From Josh and ChatGPT
