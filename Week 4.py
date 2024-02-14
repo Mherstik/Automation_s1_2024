@@ -6,6 +6,13 @@ Created on Wed Feb 14 09:37:40 2024
 @author: marcus
 """
 
+### Homework
+# Write the dice roller so it asks 
+# how many sides to roll, 
+# how many of each dice type to roll
+# and continue asking until they stop
+# e.g. roll 2 x 10 sided dice, 4 x 6 sided, 1 x 20 sided
+
 
 '''
 Create a Python program that simulates rolling a dice (e.g., a standard six-sided die).
@@ -16,17 +23,27 @@ Ask the user how many sides they want on the dice
 
 import random
 
-def diceroll():
-    roll = random.randint(1,6)
+def diceroll(sided):
+    roll = random.randint(1,sided)
     return roll
 
+sides = int(input("How many sides do you want: "))
+print("Rolling the dice....")
+print("You rolled a", diceroll(sides), " on a ", sides, "sided dice")
+print("You rolled a", diceroll(sides), " on a ", sides, "sided dice")
+print("You rolled a", diceroll(sides), " on a ", sides, "sided dice")
+
+
+def diceroll2():
+    sides = int(input("How many sides do you want: "))
+    roll = random.randint(1,sides)
+    return roll
 
 print("Rolling the dice....")
-print("You rolled a", diceroll())
+print("You rolled a", diceroll2()) # , " on a ", sides, "sided dice")
+print("You rolled a", diceroll2()) # , " on a ", sides, "sided dice")
+print("You rolled a", diceroll2()) # , " on a ", sides, "sided dice")
 
-print("You rolled a", diceroll())
-
-print("You rolled a", diceroll())
 
 
 ### HOMEWORK  ###
