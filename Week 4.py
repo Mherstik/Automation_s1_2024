@@ -59,12 +59,41 @@ for each in text:
         #print(each, "is some weird letter")
         consonants += 1
 
-
+print(text)
 print(f"There are {vowels} vowels")
 print("There are " + str(consonants) + " consonants")
 print("There are", numbers, "numbers")
 print(f"There are {special} special characters")
 print(f"There are {spaces} spaces")
 
-print(f"There are {words} words")
+text2 =[]
+word_count = 0
+for each in text.split():
+    text2.append(each)
+print(text2)
+
+
+# for each in text2:
+#     if each in string.digits:
+#         print(f"{each} is a digit")
+#         continue    
+#     else:
+#         print(f"{each} is a word")
+#         word_count += 1
+
+# for each in text2:
+#     int(each)
+
+for each in text2:
+   try:
+       int(each)
+   except:    
+       word_count += 1
+       
+num = len(text.split())
+words = num - numbers
+print(f"There are {num} words using split")
+print(f"There are {words} words using split - numbers")
+print(f"There are {word_count} words using a split and then check for numbers")
+
 
