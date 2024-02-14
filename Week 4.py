@@ -32,6 +32,8 @@ numbers = 0
 special = 0
 spaces = 0
 
+words = 0
+
 text = "the 5 Brown fox's ate 17 of my F&*^'n chickens!"
 
 # user_text = input("What do you want to check: ")
@@ -64,5 +66,5 @@ print("There are", numbers, "numbers")
 print(f"There are {special} special characters")
 print(f"There are {spaces} spaces")
 
-
+print(f"There are {words} words")
 
