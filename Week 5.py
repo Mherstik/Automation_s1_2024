@@ -23,6 +23,8 @@ Ask the user how many sides they want on the dice
 
 def roll_dice():
     pass
+    # for dice in dice_roll:
+            
 
 user_dice = []
 user_rolls = []
@@ -45,9 +47,7 @@ while True:
                         user_dice.append(sides)
                         break
                     except:
-                        print("invalid number. Please give number of rolls again")
-                        
-                
+                        print("invalid number. Please give number of rolls again")           
         except:
             print("Invalid number. Try again")
     
