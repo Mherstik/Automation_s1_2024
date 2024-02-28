@@ -6,6 +6,12 @@ Created on Wed Feb 21 09:03:53 2024
 @author: marcus
 """
 
+name = ""
+def get_name():
+    global name
+    name = input("What is your name: ")
+    return name
+
 def calc_average(*args):
     # calculate the total
     total = sum(args)
