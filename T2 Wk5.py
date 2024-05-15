@@ -58,11 +58,14 @@ with open(filename, newline='') as csvreader:
 
 
 
+print("OS name is:", os.name)
+print("Platform system is:", platform.system())
+print("Platform release is:", platform.release())
+print("platform version is:", platform.version())
+print("System platform is:", sys.platform)
 
-print(os.name)
-print(platform.system())
-print(platform.release())
-print(sys.platform)
+print("Platform processor is:", platform.processor())
+print("Hostname is:", platform.node())  # hostname
 
 
 import urllib.request
