@@ -10,6 +10,7 @@ there is duplicate information on a line
 @author: marcus
 """
 
+import sys
 import csv
 
 fname = "T2Wk6.csv"
@@ -19,15 +20,27 @@ with open(fname, newline='') as csvfile:
     dataList = list(readDuplicate)
     n = len(list(dataList))
     print(f"{n} records in list")
-
-
+    if n < 3:
+        print("Not enough data")
+        #continue
+        #break
+        sys.exit()
+    x = 2
+    while x < n:
+        if dataList[x][0] == dataList[x-1][0]: # check for duplicate
+            print(f"Line {x} has {dataList[x-1][0]}, {dataList[x-1][1]}, {dataList[x-1][2]} is same as \
+                  {dataList[x][0]},{dataList[x-1][1]}, {dataList[x][2]}")
+            x = x + 2
+        else:
+            print(f"Line {x} is {dataList[x-1][0]}, {dataList[x-1][1]}, {dataList[x-1][2]}")
+            x = x + 1
 
 #print(dataList)
-i = 0
-for each in dataList:
-    #print(type(each))    
-    print(each[1]) #, "is in index", i)
-    #i += 1
+# i = 0
+# for each in dataList:
+#     #print(type(each))    
+#     print(each[1]) #, "is in index", i)
+#     #i += 1
     
     
     
