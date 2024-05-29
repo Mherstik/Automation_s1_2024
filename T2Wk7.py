@@ -77,8 +77,6 @@ for each in set(active):
 
 
 
-
-
 # 4.2	Write a program to conduct a passive attack on the network associated
 # with the local organisation that you have carried out reconnaissance in 3.7. 
 # The passive attack should reveal the open ports on the various host servers 
