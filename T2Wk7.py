@@ -10,10 +10,6 @@ Created on Wed May 29 09:11:02 2024
 # Modify the script to output only those hosts that are active.
 
 
-# hostname
-# IP address
-# ports
-
 ## variables
 pingType = ''
 operatingSystem = ''
@@ -56,8 +52,9 @@ for host in range (115, 122):
     pingCommand = f"ping -{pingType} 2 {network}.{str(host)}"
     response = os.popen(pingCommand)
     for line in response.readlines():
-        #print(line)
+        
         if "ttl" in line.lower():
+            #print(line)
             active.append(host)
 
     #response = os.system("ping -" + str(pingType) + "2 " + network + "." + str(host))
@@ -72,7 +69,8 @@ for host in range (115, 122):
 
 print("\n _________")
 
-for each in active:
+
+for each in set(active):
     print(network + "." + str(each) + " is up.")
 
 
@@ -87,6 +85,14 @@ for each in active:
 # in the organisation’s network.
 
 
+## get ip addresses
+## for each IP address scan the port
+##
+
 # 4.3	Write another program to retrieve information from one of the open 
 # ports that you have identified above. Use appropriate protocols associated 
 # with the port to access it.
+
+
+## get an IP address and port
+## read the banner message in the 
