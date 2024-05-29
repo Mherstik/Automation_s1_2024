@@ -40,6 +40,7 @@ print("Your OS type is", operatingSystem)
 print("Pinging using", pingType)
 
 active = []
+search = "ttl"
 
 network = input ("Enter first 3 numbers of IP network, e.g. 1.2.3: ")
 print(network)
@@ -53,15 +54,19 @@ for host in range (115, 122):
     # response = os.system("ping -" + str(pingType) + "2 " + network + "." + str(host) + "> /dev/null")
     # build the command
     pingCommand = f"ping -{pingType} 2 {network}.{str(host)}"
-    response = os.system(pingCommand)
-    
+    response = os.popen(pingCommand)
+    for line in response.readlines():
+        #print(line)
+        if "ttl" in line.lower():
+            active.append(host)
+
     #response = os.system("ping -" + str(pingType) + "2 " + network + "." + str(host))
     
     
     # check for error or not
-    if response == 0:
+   # if response == 0:
         #print(network + "." + str(host) + " is up" )
-        active.append(host)
+   #     active.append(host)
     #else:         
      #   print(network + "." + str(host) + " is down" )
 
