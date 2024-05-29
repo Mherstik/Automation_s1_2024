@@ -36,8 +36,8 @@ def getOperatingSystem():
     return pingType, operatingSystem
 
 getOperatingSystem()
-# print(pingType)
-# print(operatingSystem)
+print("Your OS type is", operatingSystem)
+print("Pinging using", pingType)
 
 active = []
 
@@ -51,7 +51,11 @@ for host in range (115, 122):
     
     # remove the output of the command
     # response = os.system("ping -" + str(pingType) + "2 " + network + "." + str(host) + "> /dev/null")
-    response = os.system("ping -" + str(pingType) + "2 " + network + "." + str(host))
+    # build the command
+    pingCommand = f"ping -{pingType} 2 {network}.{str(host)}"
+    response = os.system(pingCommand)
+    
+    #response = os.system("ping -" + str(pingType) + "2 " + network + "." + str(host))
     
     
     # check for error or not
